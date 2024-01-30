@@ -1,0 +1,185 @@
+:root {
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --PaleBlue: hsl(243, 100%, 93%);
+    ----GrayishBlue: hsl(229, 7%, 55%);/*ok*/
+    --DarkBlue: hsl(228, 56%, 26%);
+    --VeryDarkBlue: hsl(229, 57%, 11%);/*ok*/
+    --Fontsize: 14px;
+    --Family: 'Raleway', sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+    background-color: var(--VeryDarkBlue);
+}
+.contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    gap: 30px;
+}
+.contain .rec {
+    padding: 15px;
+    background-color: var(--DarkBlue);
+    border-radius: 10px 63px 10px 10px;
+    width: 309px;
+    height: 160px;
+    position: relative;
+
+}
+.contain .rec .con {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: -30px;
+}
+.contain .rec .con .logo {
+    margin-bottom: 26px;
+    width: 116px;
+}
+.contain .rec .con .concon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.contain .rec .con .concon .pho {
+    background-color: black;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    padding: 22px;
+    border-radius: 9px;
+}
+.contain .rec .con .concon img {
+    transform: translate(-50%, -50%);
+}
+.contain .rect {
+    color: antiquewhite;
+    background-color: var(--DarkBlue);
+    width: 422px;
+    height: 118px;
+    padding-left: 25px;
+    position: relative;
+    top: 21px;
+    padding: 15px 25px 15px 25px;
+    border-radius: 10px;
+}
+.contain .rect .row1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    position: relative;
+}
+.contain .rect .row1 p:first-child {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: -0.1px;
+    word-spacing: 2.5px;
+    font-family: var(--Family);
+    font-weight: 400;
+}
+.contain .rect .row1  p:last-child{
+    font-size: var(--Fontsize);
+    font-family: var(--Family);
+    font-weight: 700;
+    position: absolute;
+    right: -16px;
+    top: -60px;
+    background-color: white;
+    color: var(--VeryDarkBlue);
+    font-size: 24px;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 11px;
+}
+.contain .rect .row1  p:last-child .dad1 {
+    font-size: 12px;
+    color: var(----GrayishBlue);
+}
+.contain .rect .row1  p:last-child .son1 {
+    font-size: 12px;
+    color: var(----GrayishBlue);
+    position: absolute;
+    border: 27px solid transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: white;
+    left: 56px;
+    z-index: -1;
+}
+.contain .rect .row2 {
+
+}
+.contain .rect .row2 .prog {
+    width: 100%;
+    background-color: #00000045;
+    height: 8px;
+    border-radius: 40px;
+    margin-bottom: 14px;
+    margin-top: 2px;
+}
+.contain .rect .row2 .prog .dad {
+    width: 80%;
+    display: block;
+    height: 8px;
+    background-image: linear-gradient(45deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 30px;
+}
+.contain .rect .row2 .prog .son {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    left: 97%;
+
+}
+.contain .rect .row3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--Family);
+    font-size: 14px;
+}
+.back {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    width: 1618px;
+    left: -1%;
+}
+.backmob {
+    visibility: hidden;
+}
+@media (max-width:750px) {
+    .contain {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width:400px) {
+    .contain .rect {
+        width: 305px;
+    }
+    .contain .rect .row1 p:last-child {
+        right: 63px;
+        top: 78px;
+    }
+    .back {
+        visibility:hidden;
+    }
+    .backmob {
+        visibility: visible;
+        /* height: 150vh; */
+        width: 121%;
+    }
+}
